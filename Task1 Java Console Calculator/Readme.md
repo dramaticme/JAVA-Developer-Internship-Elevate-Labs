@@ -39,8 +39,8 @@ In this project, I implemented:
 
 | Tool / Library      | Purpose |
 |---------------------|---------|
-| **Java (JDK 17)**   | Programming language |
-| **VS Code / IntelliJ IDEA** | Development environment |
+| **Java (JDK 16)**   | Programming language |
+| **VS Code** | Development environment |
 | **Terminal / Command Prompt** | Running the application |
 | **`java.util.Scanner`** | Handling console input |
 | **`java.lang.Math`** | Mathematical operations |
