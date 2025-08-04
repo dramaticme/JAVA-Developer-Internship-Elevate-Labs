@@ -3,10 +3,10 @@ import java.util.*;
 import java.lang.Math;
 
 public class Java_Console_Calculator_Task1{
+    static Scanner sc = new Scanner(System.in);
      
     //Addition Method
-    public static void Addition(){
-        Scanner sc = new Scanner(System.in);   
+    public static void Addition(){  
         System.out.println("------Addition------");
         
         System.out.print("Enter the number of numbers : ");
@@ -16,13 +16,12 @@ public class Java_Console_Calculator_Task1{
             return;
         }
 
-        int[] arr = new int[n];
         int sum = 0;
 
         for(int i =0; i<n; i++){
             System.out.print("Enter number: ");
-            arr[i] = sc.nextInt();            
-            sum = sum +arr[i];
+            int input = sc.nextInt();            
+            sum = sum + input;
 
             if (sum > Integer.MAX_VALUE || sum < Integer.MIN_VALUE) {
             System.out.println("Limit Exceeded");
@@ -35,7 +34,6 @@ public class Java_Console_Calculator_Task1{
 
     //Subtraction Method
     public static void Subtraction(){
-        Scanner sc = new Scanner(System.in);   
         System.out.println("------Subtraction------");
         
         System.out.print("Enter the number of numbers : ");
@@ -45,17 +43,16 @@ public class Java_Console_Calculator_Task1{
             return;
         }
 
-        int[] arr = new int[n];
         int sub = 0;
 
         for(int i =0; i<n; i++){
             System.out.print("Enter number: ");
-            arr[i] = sc.nextInt();            
+            int input = sc.nextInt();            
             if(i==0){
-                sub = arr[0];
+                sub = input;
             }
             else{
-                sub = sub - arr[i];
+                sub = sub - input;
             }
 
             if (sub > Integer.MAX_VALUE || sub < Integer.MIN_VALUE) {
@@ -68,8 +65,7 @@ public class Java_Console_Calculator_Task1{
     }
 
     //Multiplication Method
-    public static void Multiplication(){
-        Scanner sc = new Scanner(System.in);   
+    public static void Multiplication(){   
         System.out.println("------Multiplication------");
         
         System.out.print("Enter the number of numbers : ");
@@ -79,13 +75,12 @@ public class Java_Console_Calculator_Task1{
             return;
         }
 
-        int[] arr = new int[n];
         int mul = 1;
 
         for(int i =0; i<n; i++){
             System.out.print("Enter number: ");
-            arr[i] = sc.nextInt();            
-            mul = mul *arr[i];
+            int input = sc.nextInt();            
+            mul *=input;
 
             if (mul > Integer.MAX_VALUE || mul < Integer.MIN_VALUE) {
             System.out.println("Limit Exceeded");
@@ -98,7 +93,6 @@ public class Java_Console_Calculator_Task1{
 
     //Division Method
     public static void Division(){
-        Scanner sc = new Scanner(System.in);
         System.out.println("------Division------");
 
         System.out.print("Enter numerator (top number): ");
@@ -127,7 +121,6 @@ public class Java_Console_Calculator_Task1{
 
     //Power Method
     public static void Power(){
-        Scanner sc = new Scanner(System.in);
         System.out.println("------Power------");
 
         System.out.print("Enter power value: ");
@@ -140,20 +133,23 @@ public class Java_Console_Calculator_Task1{
         System.out.println(result);
     }
 
-    //SqureRoot Method
-    public static void SqureRoot(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("------SqureRoot------");
+    //SquareRoot Method
+    public static void SquareRoot(){
+        System.out.println("------SquareRoot------");
 
         System.out.print("Enter the Number: ");
         double Number = sc.nextInt();
+
+        if(Number<0){
+            System.out.println("undefined");
+            return;
+        }
 
         double result = Math.sqrt(Number);
         System.out.println(result);
     }
     public static void main(String [] args){
 
-        Scanner sc = new Scanner(System.in);
         boolean m = true;
         while(m == true){
             //calculator Options
@@ -163,7 +159,7 @@ public class Java_Console_Calculator_Task1{
             System.out.println("3. Multiplication");
             System.out.println("4. Division");
             System.out.println("5. Power");
-            System.out.println("6. Squreroot");
+            System.out.println("6. Squareroot");
             System.out.println("7. Exit");
             System.out.print("Enter the index value to choose: ");
 
@@ -191,7 +187,7 @@ public class Java_Console_Calculator_Task1{
                     break;
 
                 case 6:
-                    SqureRoot();
+                    SquareRoot();
                     break;
 
                 case 7:
