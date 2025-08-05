@@ -1,6 +1,6 @@
 ---
 
-# 🩶 Java Student Management System – Task 2 (August 2025)
+# 🚵‍♀️ Java Student Management System – Task 2 (August 2025)
 
 In this task, I created a **console-based Student Management System** using Java to improve my understanding of **object-oriented programming**, **CRUD operations**, and the use of **dynamic data structures** like `ArrayList`.
 
